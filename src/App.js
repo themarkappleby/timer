@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import './App.css';
+import bell from './boxing-bell.mp3';
 
-const sfx = new Audio('/boxing-bell.mp3');
+const sfx = new Audio(bell);
 const TWEAK = 5;
 let interval = null;
 
