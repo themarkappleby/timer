@@ -1,15 +1,16 @@
 {
   "files": {
-    "main.css": "/timer/static/css/main.109366dd.css",
-    "main.js": "/timer/static/js/main.8b89e39a.js",
+    "main.css": "/timer/static/css/main.41303857.css",
+    "main.js": "/timer/static/js/main.f726f27f.js",
     "static/js/787.8e9e615b.chunk.js": "/timer/static/js/787.8e9e615b.chunk.js",
+    "static/media/boxing-bell.mp3": "/timer/static/media/boxing-bell.849952216abb1ff541ea.mp3",
     "index.html": "/timer/index.html",
-    "main.109366dd.css.map": "/timer/static/css/main.109366dd.css.map",
-    "main.8b89e39a.js.map": "/timer/static/js/main.8b89e39a.js.map",
+    "main.41303857.css.map": "/timer/static/css/main.41303857.css.map",
+    "main.f726f27f.js.map": "/timer/static/js/main.f726f27f.js.map",
     "787.8e9e615b.chunk.js.map": "/timer/static/js/787.8e9e615b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.109366dd.css",
-    "static/js/main.8b89e39a.js"
+    "static/css/main.41303857.css",
+    "static/js/main.f726f27f.js"
   ]
 }
