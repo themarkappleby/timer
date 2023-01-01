@@ -36,6 +36,7 @@ function App() {
       setSeconds(startTime);
       clearInterval(interval);
     } else {
+          sfx.src = bell;
       setRunning(true);
       interval = setInterval(() => {
         setSeconds(seconds => {
