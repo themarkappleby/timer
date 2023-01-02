@@ -20,7 +20,7 @@ async function preventScreenDim () {
 preventScreenDim();
 
 const getProgress = (current, total) => {
-  const progress = (total - current) / total * 100;
+  const progress = (current - 1) / ( total - 1) * 100;
   return `${progress}%`;
 }
 
@@ -41,8 +41,9 @@ function App() {
       interval = setInterval(() => {
         setSeconds(seconds => {
           const newSeconds = seconds - 1;
-          if (newSeconds < 0) {
+          if (newSeconds === 0) {
             sfx.src = bell;
+          } else if (newSeconds < 0) {
             setRunning(false);
             setSeconds(startTime);
             clearInterval(interval);
@@ -56,13 +57,14 @@ function App() {
 
   return (
     <div className="app">
-      <div className="progress" style={{height: getProgress(seconds, startTime)}} />
-      <div className="time">
-        {seconds}
-      </div>
-      <button onClick={startTimer} className="touchTarget" />
-      { !running && (
-        <div className="controls">
+      <div className="container" style={{gap: running ? '0' : '2px'}}>
+        <button className="time" onClick={startTimer}>
+          { running && (
+            <div className="progress" style={{height: getProgress(seconds, startTime)}} />
+          )}
+          <span>{seconds}</span>
+        </button>
+        <div className="controls" style={{height: running ? '0%' : '50%'}}>
           <button onClick={() => {
             if (startTime > 5) {
               setSeconds(startTime - TWEAK)
@@ -74,7 +76,7 @@ function App() {
             setStartTime(startTime + TWEAK)
           }}>+</button>
         </div>
-      )}
+      </div>
     </div>
   );
 }
