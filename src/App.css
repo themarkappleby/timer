@@ -4,6 +4,17 @@
   --white: white;
 }
 
+html,
+body {
+  position: fixed;
+  overflow: hidden;
+  overscroll-behavior-y: none;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
 .app {
   height: 100vh;
   background: var(--primary);
