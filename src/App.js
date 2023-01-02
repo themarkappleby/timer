@@ -58,12 +58,12 @@ function App() {
   return (
     <div className="app">
       <div className="container" style={{gap: running ? '0' : '2px'}}>
-        <button className="time" onClick={startTimer}>
+        <div className="time" onClick={startTimer}>
           { running && (
             <div className="progress" style={{height: getProgress(seconds, startTime)}} />
           )}
           <span>{seconds}</span>
-        </button>
+        </div>
         <div className="controls" style={{height: running ? '0%' : '50%'}}>
           <button onClick={() => {
             if (startTime > 5) {
