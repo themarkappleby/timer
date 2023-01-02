@@ -9,6 +9,7 @@
   background: var(--primary);
   position: relative;
   background: var(--white);
+  overflow: hidden;
 }
 
 .container {
